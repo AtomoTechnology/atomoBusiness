@@ -60,8 +60,7 @@ const onLogout = () =>{
             </div>
                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-center">
                 <ul className="navbar-nav ml-auto">
-                <i class="fas fa-user"></i>
-                <i class="fab fa-github-square"></i>
+                <i className="fa-regular"></i>
                 </ul>
             </div>
         </nav>

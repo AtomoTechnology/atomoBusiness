@@ -13,14 +13,16 @@ const onLogout = () =>{
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
             <Link 
-                className="navbar-brand  p-2" 
+                className="navbar-brand  p-2  col-2" 
                 to="/"
             >
                 Atomo Tecnology
             </Link>
-
-            <div className="navbar-collapse col-8  d-flex justify-content-center">
-                <div className="navbar-nav">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span className="navbar-toggler-icon"></span>
+             </button>
+            <div className="navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <div className="navbar-nav col-8">
 
                     <NavLink 
                         className={({isActive}) =>`nav-item nav-link ${ isActive ? 'active': ''}`} 
@@ -56,19 +58,20 @@ const onLogout = () =>{
                     >
                         Contacto
                     </NavLink>
-                </div>
-            </div>
+                </div>                
 
-            {/* <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
-                    <button 
-                        className='nav-item nav-link btn'
-                        onClick={onLogout}
-                    >
-                        Login
-                    </button>
-                </ul>
-            </div> */}
-        </nav>
+                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
+                    <ul className="navbar-nav ml-auto right">
+                        <button 
+                            className='nav-item nav-link btn'
+                            onClick={onLogout}
+                        >
+                            Login
+                        </button>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>        
     )
 }
