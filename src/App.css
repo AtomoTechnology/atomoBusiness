@@ -1,104 +1,230 @@
-*{
-  background-color: rgb(33,37,41);
+body{margin-top:20px;}
+/* About Me 
+---------------------*/
+@media (max-width: 991px) {
+  .about-text {
+    margin-top: 40px;
+  }
 }
-
-.div{
-  width: 80%;
-  height: 205px;
-  font-family: 'Roboto';
-  font-style: normal;
+.about-text h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+@media (max-width: 767px) {
+  .about-text h3 {
+    font-size: 35px;
+  }
+}
+.about-text h4 {
   font-weight: 600;
-  font-size: 19px;
-  line-height: 28px;
-  display: flex;
-  align-items: center;
-  padding: 2%;
-  color: #fff;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .about-text h4 {
+    font-size: 18px;
+  }
+}
+.about-text p {
+  font-size: 18px;
+}
+.about-text p mark {
+  font-weight: 600;
+  color: #3a3973;
+}
+.about-text .btn-bar {
+  padding-top: 8px;
+}
+.about-text .btn-bar a {
+  min-width: 150px;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.label{  
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 75px;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(271.64deg, #005C84 2.25%, rgba(69, 210, 255, 0.58) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+.about-list {
+  padding-top: 10px;
 }
-
-.divimg{
-  width: 552px;
-height: 345px;
+.about-list .media {
+  padding: 5px 0;
 }
-.img{
+.about-list label {
+  color: #3a3973;
+  font-weight: 600;
+  width: 88px;
+  margin: 0;
+  position: relative;
+}
+.about-list label:after {
+  content: "";
   position: absolute;
-  width: 480px;
-  height: 292px;
+  top: 0;
+  bottom: 0;
+  right: 11px;
+  width: 1px;
+  height: 12px;
+  background: #3a3973;
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  margin: auto;
+  opacity: 0.5;
+}
+.about-list p {
+  margin: 0;
+  font-size: 15px;
 }
 
-.tools{
-  width: 883px;
-height: 47px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 75px;
-display: flex;
-align-items: center;
-
-background: linear-gradient(271.64deg, #005C84 2.25%, rgba(69, 210, 255, 0.58) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
+.about-img {
+  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.06);
+  padding: 10px;
+  background: #ffffff;
+}
+@media (max-width: 991px) {
+  .about-img {
+    margin-top: 30px;
+  }
 }
 
-.divimgtools{
-  display: flex;
-  /* flex-direction: row; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: 45px 67px; */
-  /* gap: 60px; */
-  width: 3990.44px;
-  height: 290px;
+.counter-section {
+  padding: 40px 20px;
+}
+.counter-section .count-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.counter-section .count {
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+.counter-section p {
+  font-weight: 500;
+  margin: 0;
+  color: #fe4f6c;
+}
+.theme-color {
+    color: #fe4f6c;
 }
 
-.sectioncontact{
-  display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 9px 24px;
-gap: 20px;
-isolation: isolate;
-
-width: 1280px;
-height: 711px;
-
-background: #FFFFFF;
+.section {
+    /* padding: 100px 0; */
+    position: relative;
+    width: 90%;
+    justify-content: center;
+    justify-items: center;
+    left: 5%;
+    right: 5%;
+}
+.gray-bg {
+    background-color: #ebf4fa;
+}
+.px-btn.theme {
+    background: #fe4f6c;
+    color: #ffffff;
+    border: 2px solid #fe4f6c;
+}
+.px-btn {
+    padding: 0 20px;
+    line-height: 42px;
+    border: 2px solid transparent;
+    position: relative;
+    display: inline-block;
+    background: none;
+    border: none;
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.lblcontact{
-  width: 499px;
-height: 47px;
+.px-btn.theme-t {
+    background: transparent;
+    border: 2px solid #fe4f6c;
+    color: #fe4f6c;
+}
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 75px;
-display: flex;
-align-items: center;
 
-background: linear-gradient(271.64deg, #005C84 2.25%, rgba(69, 210, 255, 0.58) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+.portfolioFilter a {
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-out;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+.portfolioFilter a:hover {
+  background-color: #228bdf;
+  color: #ffffff;
+}
+.portfolioFilter a.current {
+  background-color: #228bdf;
+  color: #ffffff;
+}
+.thumb {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+.thumb-img {
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+}
+.gal-detail h4 {
+  margin: 16px auto 10px auto;
+  width: 80%;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gal-detail .ga-border {
+  height: 3px;
+  width: 40px;
+  background-color: #228bdf;
+  margin: 10px auto;
+}
+
+
+
+
+.tabs-vertical-env .tab-content {
+  background: #ffffff;
+  display: table-cell;
+  margin-bottom: 30px;
+  padding: 30px;
+  vertical-align: top;
+}
+.tabs-vertical-env .nav.tabs-vertical {
+  display: table-cell;
+  min-width: 120px;
+  vertical-align: top;
+  width: 150px;
+}
+.tabs-vertical-env .nav.tabs-vertical li.active > a {
+  background-color: #ffffff;
+  border: 0;
+}
+.tabs-vertical-env .nav.tabs-vertical li > a {
+  color: #333333;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
 }
