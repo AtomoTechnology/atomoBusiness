@@ -1,13 +1,14 @@
 import { Routes, Route, Navigate } from "react-router-dom"
 import { Footer, Navbar } from "../../ui"
 import { ClientPage, ContactPage, StartPage, TechnologyPage, UsPage } from "../pages"
+import '../../App.css'
 
 
 export const AtomoRoutes = () => {
   return (
     <>
         <Navbar/>
-        <div className="container">
+        <div className="container-fluid">
             <Routes>
                     <Route path="start" element={<StartPage/>} />
                     <Route path="us" element={<UsPage />} />
