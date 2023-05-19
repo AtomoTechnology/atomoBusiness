@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { Footer, Navbar } from "../../ui"
 import { ClientPage, ContactPage, StartPage, TechnologyPage, UsPage } from "../pages"
 import '../../App.css'
+import "primereact/resources/themes/lara-light-indigo/theme.css";    
+import "primereact/resources/primereact.min.css";  
 
 
 export const AtomoRoutes = () => {

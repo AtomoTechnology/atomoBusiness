@@ -10,7 +10,7 @@ const onLogout = () =>{
 }
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2 fixed-bottom">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2  fixed-bottom">
             
             <Link 
                 className="navbar-brand  p-2" 
