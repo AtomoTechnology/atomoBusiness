@@ -7,40 +7,40 @@ export const StartPage = () => {
 
   const [products, setProducts] = useState([]);
   const responsiveOptions = [
-      {
-          breakpoint: '1199px',
-          numVisible: 1,
-          numScroll: 1
-      },
-      {
-          breakpoint: '991px',
-          numVisible: 2,
-          numScroll: 1
-      },
-      {
-          breakpoint: '767px',
-          numVisible: 1,
-          numScroll: 1
-      }
+    {
+      breakpoint: '1199px',
+      numVisible: 1,
+      numScroll: 1
+    },
+    {
+      breakpoint: '991px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '767px',
+      numVisible: 1,
+      numScroll: 1
+    }
   ];
 
-useEffect(() => {
-    ProductService.getProductsSmall().then((data:any) => setProducts(data.slice(0, 9)));
-}, []);
+  useEffect(() => {
+    ProductService.getProductsSmall().then((data: any) => setProducts(data.slice(0, 9)));
+  }, []);
 
-const productTemplate = (product:any) => {
-  return (
+  const productTemplate = (product: any) => {
+    return (
       <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
-          <div className="mb-3">
-              <img src={`../../../public/image/${product.image}`} alt={product.name} className="w-6 shadow-2 w-100" />
-          </div>
-          <div>
-              {/* <h4 className="mb-1">{product.name}</h4> */}
-              {/* <h6 className="mt-0 mb-3">${product.price}</h6> */}
-          </div>
+        <div className="mb-3">
+          <img src={`../../../public/image/${product.image}`} alt={product.name} className="w-6 shadow-2 w-100" />
+        </div>
+        <div>
+          {/* <h4 className="mb-1">{product.name}</h4> */}
+          {/* <h6 className="mt-0 mb-3">${product.price}</h6> */}
+        </div>
       </div>
-  );
-};
+    );
+  };
 
   return (
     <>
@@ -73,11 +73,11 @@ const productTemplate = (product:any) => {
           </div>
         </div>
       </section>
-      <section className=" section about-section gray-bg mt-2 section-h">
-        <h3 className="dark-color p-3">Nuestros clientes</h3>     
-        <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />       
+      <section className=" section about-section gray-bg mt-2 section-h" id="our-clients">
+        <h3 className="dark-color p-3">Nuestros clientes</h3>
+        <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
       </section>
-      <section className=" section about-section gray-bg mt-2 section-h">
+      <section className=" section about-section gray-bg mt-2 section-h" id="techonologies">
         <h3 className="dark-color p-3">Tecnología</h3>
         {/* <div style={{ display: "flex" }}>
           <div className="col-sm-4">
@@ -182,9 +182,9 @@ const productTemplate = (product:any) => {
             </div>
           </div>
         </div> */}
-        
-         {/* <div className="card"> */}
-            <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
+
+        {/* <div className="card"> */}
+        <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
         {/* </div> */}
       </section>
     </>
